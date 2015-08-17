@@ -1,6 +1,7 @@
-SUBDIRS = doc src 
+SUBDIRS = src 
+#SUBDIRS = doc src 
 
-if USE_CHECK
-SUBDIRS += tests
-endif
+#if USE_CHECK
+#SUBDIRS += tests
+#endif
 
