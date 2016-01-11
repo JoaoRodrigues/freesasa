@@ -50,7 +50,7 @@ AC_CHECK_PROG(DOXYGEN, doxygen, doxygen)
 AM_CONDITIONAL([HAVE_LATEX], [test -n "$LATEX" && test -n "$DVIPS"])
 AM_COND_IF([HAVE_LATEX],[],[echo "LaTeX not available, .dvi and .ps documentation cannot be built"])
 AM_CONDITIONAL([HAVE_PDF],[test -n "$EPSTOPDF" && test -n "$PDFLATEX"])
-AM_COND_IF([HAVE_PDF],[],[.pdf documentation cannot be built])
+AM_COND_IF([HAVE_PDF],[],[echo ".pdf documentation cannot be built"])
 AM_CONDITIONAL([HAVE_DOXYGEN],[test -n "$DOXYGEN"])
 AM_COND_IF([HAVE_DOXYGEN],[AC_CONFIG_FILES([doc/Doxyfile])],[echo "Doxygen not available, html documentation cannot be built"])
 if test -n "$DOXYGEN"; then
